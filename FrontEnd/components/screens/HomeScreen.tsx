@@ -1,102 +1,174 @@
 // HomeScreen.tsx
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
 import BackSurface from '../common/BackSurface';
 import { Image } from "expo-image";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Border, FontSize, Color, FontFamily, Padding } from '@/constants/Colors';
 
+
+
 const HomeScreen: React.FC = () => {
     return (
         <BackSurface surfaceStyle={styles.container}>
+            <ScrollView>
+                <View style={[styles.card, styles.cardLayout]}>
+                    <Text style={styles.textStyle2}>Welcome to the Home Screen!</Text>
+                </View>
+                <View style={styles.shortcut}>
+                    <LinearGradient
+                        style={styles.shortcutSpaceBlock}
+                        locations={[0, 0.91]}
+                        colors={["#ff9557", "#fdd0b6"]}
+                    >
+                        <Image
+                            style={styles.illustrationsaveMoneyIcon}
+                            contentFit="cover"
+                            // source={require("../assets/illustrationsave-money.png")}
+                            source={require('../../assets/illustrationsave-money.png')}
+                        />
+                        <Text>Stock</Text>
+                    </LinearGradient>
+                    <LinearGradient
+                        style={[styles.shortcut2, styles.shortcutSpaceBlock]}
+                        locations={[0, 0.29, 1]}
+                        colors={["#bdbcff", "#d2d1ff", "#e2e1ff"]}
+                    >
+                        <Image
+                            style={styles.illustrationsaveMoneyIcon}
+                            contentFit="cover"
+                            source={require("../../assets/illustrationsecurity.png")}
+                        />
+                        <Text>Stock</Text>
+                    </LinearGradient>
+                    <LinearGradient
+                        style={[styles.shortcut2, styles.shortcutSpaceBlock]}
+                        locations={[0, 0.91]}
+                        colors={["#fec6a5", "#ffe7d9"]}
+                    >
+                        <Image
+                            style={styles.illustrationsaveMoneyIcon}
+                            contentFit="cover"
+                            source={require("../../assets/illustrationsave-money1.png")}
+                        />
+                        <Text>Stock</Text>
+                    </LinearGradient>
+                </View>
+                <View style={styles.shortcut4}>
+                    <LinearGradient
+                        style={styles.shortcutSpaceBlock}
+                        locations={[0, 0.91]}
+                        colors={["#ff9557", "#fdd0b6"]}
+                    >
+                        <Image
+                            style={styles.illustrationsaveMoneyIcon}
+                            contentFit="cover"
+                            // source={require("../assets/illustrationsave-money.png")}
+                            source={require('../../assets/illustrationsave-money.png')}
+                        />
+                        <Text>Stock</Text>
+                    </LinearGradient>
+                    <LinearGradient
+                        style={[styles.shortcut2, styles.shortcutSpaceBlock]}
+                        locations={[0, 0.29, 1]}
+                        colors={["#bdbcff", "#d2d1ff", "#e2e1ff"]}
+                    >
+                        <Image
+                            style={styles.illustrationsaveMoneyIcon}
+                            contentFit="cover"
+                            source={require("../../assets/illustrationsecurity.png")}
+                        />
+                        <Text>Stock</Text>
+                    </LinearGradient>
+                    <LinearGradient
+                        style={[styles.shortcut2, styles.shortcutSpaceBlock]}
+                        locations={[0, 0.91]}
+                        colors={["#fec6a5", "#ffe7d9"]}
+                    >
+                        <Image
+                            style={styles.illustrationsaveMoneyIcon}
+                            contentFit="cover"
+                            source={require("../../assets/illustrationsave-money1.png")}
+                        />
+                        <Text>Stock</Text>
+                    </LinearGradient>
+                </View>
 
-            <View style={[styles.card, styles.cardLayout]}>
-                <Text style={styles.textStyle2}>Welcome to the Home Screen!</Text>
-            </View>
-            <View style={styles.shortcut}>
-                <LinearGradient
-                    style={styles.shortcutSpaceBlock}
-                    locations={[0, 0.91]}
-                    colors={["#ff9557", "#fdd0b6"]}
-                >
+
+                <View style={[styles.step, styles.stepFlexBox]}>
+                    <View style={styles.content2}>
+                        <View style={styles.step1}>
+                            <View style={styles.logo}>
+                                <Image
+                                    style={styles.iconboldticketStar}
+                                    contentFit="cover"
+                                    source={require("../../assets/iconboldticket-star.png")}
+                                />
+                            </View>
+                            <View style={styles.text1}>
+                                <Text style={[styles.step11, styles.stotTypo]}>Step 1</Text>
+                                <Text
+                                    style={[styles.enterIntroduceCouper, styles.text3Typo]}
+                                >{`Enter introduce couper `}</Text>
+                            </View>
+                        </View>
+                        <View style={styles.step2}>
+                            <View style={styles.logo}>
+                                <Image
+                                    style={styles.octicongift24}
+                                    contentFit="cover"
+                                    source={require("../../assets/iconboldfund.png")}
+                                />
+                            </View>
+                            <View style={styles.text1}>
+                                <Text style={[styles.step11, styles.stotTypo]}>Step 2</Text>
+                                <Text style={[styles.enterIntroduceCouper, styles.text3Typo]}>
+                                    Deposit in fund
+                                </Text>
+                            </View>
+                        </View>
+                        <Image
+                            style={[styles.contentChild, styles.rewardPosition]}
+                            contentFit="cover"
+                            source={require("../../assets/vector-221.png")}
+                        />
+                    </View>
                     <Image
-                        style={styles.illustrationsaveMoneyIcon}
+                        style={styles.illustrationcoinIcon}
                         contentFit="cover"
-                        // source={require("../assets/illustrationsave-money.png")}
-                        source={require('../../assets/illustrationsave-money.png')}
+                        source={require("../../assets/illustrationcoin.png")}
                     />
-                    <Text>Stock</Text>
-                </LinearGradient>
-                <LinearGradient
-                    style={[styles.shortcut2, styles.shortcutSpaceBlock]}
-                    locations={[0, 0.29, 1]}
-                    colors={["#bdbcff", "#d2d1ff", "#e2e1ff"]}
-                >
-                    <Image
-                        style={styles.illustrationsaveMoneyIcon}
-                        contentFit="cover"
-                        source={require("../../assets/illustrationsecurity.png")}
-                    />
-                    <Text>Stock</Text>
-                </LinearGradient>
-                <LinearGradient
-                    style={[styles.shortcut2, styles.shortcutSpaceBlock]}
-                    locations={[0, 0.91]}
-                    colors={["#fec6a5", "#ffe7d9"]}
-                >
-                    <Image
-                        style={styles.illustrationsaveMoneyIcon}
-                        contentFit="cover"
-                        source={require("../../assets/illustrationsave-money1.png")}
-                    />
-                    <Text>Stock</Text>
-                </LinearGradient>
-            </View>
-            <View style={styles.shortcut4}>
-                <LinearGradient
-                    style={styles.shortcutSpaceBlock}
-                    locations={[0, 0.91]}
-                    colors={["#ff9557", "#fdd0b6"]}
-                >
-                    <Image
-                        style={styles.illustrationsaveMoneyIcon}
-                        contentFit="cover"
-                        // source={require("../assets/illustrationsave-money.png")}
-                        source={require('../../assets/illustrationsave-money.png')}
-                    />
-                    <Text>Stock</Text>
-                </LinearGradient>
-                <LinearGradient
-                    style={[styles.shortcut2, styles.shortcutSpaceBlock]}
-                    locations={[0, 0.29, 1]}
-                    colors={["#bdbcff", "#d2d1ff", "#e2e1ff"]}
-                >
-                    <Image
-                        style={styles.illustrationsaveMoneyIcon}
-                        contentFit="cover"
-                        source={require("../../assets/illustrationsecurity.png")}
-                    />
-                    <Text>Stock</Text>
-                </LinearGradient>
-                <LinearGradient
-                    style={[styles.shortcut2, styles.shortcutSpaceBlock]}
-                    locations={[0, 0.91]}
-                    colors={["#fec6a5", "#ffe7d9"]}
-                >
-                    <Image
-                        style={styles.illustrationsaveMoneyIcon}
-                        contentFit="cover"
-                        source={require("../../assets/illustrationsave-money1.png")}
-                    />
-                    <Text>Stock</Text>
-                </LinearGradient>
-            </View>
+                </View>
+            </ScrollView>
         </BackSurface>
     );
 };
-
 const styles = StyleSheet.create({
+    rewardPosition: {
+        left: 16,
+        position: "absolute",
+    },
+    octicongift24: {
+        height: 24,
+        width: 24,
+        overflow: "hidden",
+    },
+    stepFlexBox: {
+        marginTop: 582,
+        backgroundColor: '#202b41',
+        borderRadius: Border.br_base,
+        alignItems: "center",
+        flexDirection: "row",
+    },
+    text3Typo: {
+        // color: Color.aliasTokenColorNeutralLightmodeTextSecondary,
+        color: 'white',
+        textAlign: "left",
+        fontFamily: FontFamily.bodyB2Regular,
+        lineHeight: 16,
+        fontSize: FontSize.captionC1Regular_size,
+    },
     cardLayout: {
         borderRadius: Border.br_5xl,
         overflow: "hidden",
@@ -107,11 +179,11 @@ const styles = StyleSheet.create({
     },
     card: {
         backgroundColor: Color.primaryPrimary10,
-        width: 340,
+        width: 350,
         height: 200,
         position: "absolute",
         overflow: "hidden",
-        marginTop: 70,
+        marginTop: 110,
         alignSelf: 'center'
     },
     linearGradient: {
@@ -126,13 +198,76 @@ const styles = StyleSheet.create({
         marginLeft: 14,
     },
     shortcut: {
-        top: 285,
+        top: 325,
         // left: 18,
         flexDirection: "row",
         position: "absolute",
     },
+    stotTypo: {
+        lineHeight: 25,
+        textAlign: "left",
+        letterSpacing: 0,
+        fontSize: FontSize.labelL1Medium_size,
+    },
+    iconboldticketStar: {
+        height: 24,
+        width: 24,
+    },
+    logo: {
+        borderRadius: Border.br_6xl,
+        backgroundColor: Color.aliasTokenColorPrimaryLightActive,
+        padding: Padding.p_9xs,
+        flexDirection: "row",
+    },
+    step11: {
+        fontFamily: FontFamily.labelL1Semibold,
+        alignSelf: "stretch",
+        fontWeight: "600",
+        color: 'white',
+    },
+    enterIntroduceCouper: {
+        alignSelf: "stretch",
+    },
+    text1: {
+        marginLeft: 12,
+        flex: 1,
+    },
+    step1: {
+        alignSelf: "stretch",
+        zIndex: 0,
+        alignItems: "center",
+        flexDirection: "row",
+    },
+    step2: {
+        marginTop: 16,
+        alignSelf: "stretch",
+        zIndex: 1,
+        alignItems: "center",
+        flexDirection: "row",
+    },
+    contentChild: {
+        top: 38,
+        maxWidth: "100%",
+        height: 24,
+        zIndex: 2,
+        overflow: "hidden",
+        color: 'white',
+        backgroundColor:'white',
+    },
+    content: {
+        flex: 1,
+    },
+    illustrationcoinIcon: {
+        height: 100,
+        width: 100,
+        marginLeft: 12,
+    },
+    step: {
+        padding: Padding.p_base,
+        width: 343,
+    },
     shortcut4: {
-        top: 415,
+        top: 455,
         // left: 18,
         flexDirection: "row",
         position: "absolute",
@@ -152,11 +287,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'flex-start',
-        marginTop: 16,
+        // marginTop: -2,
         color: '#101828',
         backgroundColor: '#0c0e19',
     },
-    content: {
+    content2: {
         flex: 1,
         width: '90%',
     },
