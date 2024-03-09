@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import EditScreenInfo from '@/components/EditScreenInfo';
 import HomeScreen from '@/components/screens/HomeScreen';
 import { Provider as PaperProvider } from 'react-native-paper';
-import myTheme from '@/constants/Colors';
+// import myTheme from '@/constants/Colors';
 // import { Text, View } from '@/components/Themed';
 import {
   Text,

@@ -7,7 +7,7 @@ export const FontFamily = {
   };
   /* font sizes */
   export const FontSize = {
-    labelL1Medium_size: 16,
+    labelL1Semibold_size: 16,
     captionC1Regular_size: 12,
     titleT3Medium_size: 20,
     t30T30S30Semibold42_size: 30,
@@ -17,10 +17,10 @@ export const FontFamily = {
   export const Color = {
     neutralNeutral10: "#fff",
     aliasTokenColorNeutralLightmodeTextPrimary: "#272727",
-    aliasTokenColorNeutralDarkmodeSurface: "#191b1e",
+    aliasTokenColorNeutralLightmodeTextTitle: "#191b1e",
     aliasTokenColorNeutralDarkmodeBackground: "#0c0c0c",
     colorBlack: "#000",
-    aliasTokenColorPrimaryNormal: "#4c4aef",
+    colorBlueviolet: "#4c4aef",
     aliasTokenColorPrimaryLight: "#ededfd",
     aliasTokenColorNeutralLightmodeOutline: "#e3e3e3",
     aliasTokenColorNeutralLightmodeSurface: "#f6f6f6",
@@ -30,6 +30,7 @@ export const FontFamily = {
     aliasTokenColorPrimaryLightActive: "#c8c7fa",
     primaryPrimary10: "#b7b6f8",
     aliasTokenColorNeutralDarkmodeTextSecondary: "#b4b4b4",
+    globalTokenGradientGradient2:"",
   };
   /* Paddings */
   export const Padding = {

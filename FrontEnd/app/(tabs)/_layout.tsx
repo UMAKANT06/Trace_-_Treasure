@@ -2,7 +2,7 @@ import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { createMaterialBottomTabNavigator } from "react-native-paper/react-navigation";
 import { useTheme } from "react-native-paper";
-import myTheme from '@/constants/Colors';
+// import myTheme from '@/constants/Colors';
 import Home from "./index";
 import TestScreen from '@/components/screens/TestScreen';
 import DashBoard from '@/components/screens/DashBoard';
