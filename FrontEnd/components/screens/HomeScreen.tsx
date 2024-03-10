@@ -6,6 +6,7 @@ import BackSurface from '../common/BackSurface';
 import { Image } from "expo-image";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Border, FontSize, Color, FontFamily, Padding } from '@/constants/Colors';
+import CardContent from 'react-native-paper/lib/typescript/components/Card/CardContent';
 
 
 
@@ -13,8 +14,31 @@ const HomeScreen: React.FC = () => {
     return (
         <BackSurface surfaceStyle={styles.container}>
             <ScrollView>
-                <View style={[styles.card, styles.cardLayout]}>
-                    <Text style={styles.textStyle2}>Welcome to the Home Screen!</Text>
+                <View>
+                    <LinearGradient
+                     style={styles.topCard}
+                     locations={[0, 0.79]}
+                     colors={["#050414","#212d43"]}
+                    >
+                        <Card style={styles.searchCard}>
+                            <Card.Content>
+                            <Text style={{color:'white'}}>Search</Text>
+                            </Card.Content>
+                        </Card>
+                        
+
+                    </LinearGradient>
+                </View>
+                <View >
+                <LinearGradient
+                        style={[styles.card, styles.cardLayout]}
+                        locations={[0, 0.39, 1.3]}
+                        colors={["#bdbcff", "#d2d1ff", "#e2e1ff"]}
+                    >
+                
+    
+                    </LinearGradient>
+                  
                 </View>
                 <View style={styles.shortcut}>
                     <LinearGradient
@@ -145,6 +169,26 @@ const HomeScreen: React.FC = () => {
     );
 };
 const styles = StyleSheet.create({
+    searchCard:{
+        backgroundColor:'#0c0e19',
+        width:300,
+        alignSelf:'center',
+        marginTop:32
+
+    },
+    topCard:{
+        paddingTop: Padding.p_base,
+        height: 112,
+        width: 354,
+        paddingHorizontal: Padding.p_base,
+        borderRadius: 30,
+        justifyContent: "space-between",
+        paddingBottom: Padding.p_5xs,
+        alignItems: "center",
+        marginTop:-15,
+        alignSelf:'center'
+
+    },
     rewardPosition: {
         left: 16,
         position: "absolute",
@@ -155,11 +199,12 @@ const styles = StyleSheet.create({
         overflow: "hidden",
     },
     stepFlexBox: {
-        marginTop: 582,
+        marginTop: 480,
         backgroundColor: '#202b41',
         borderRadius: Border.br_base,
         alignItems: "center",
         flexDirection: "row",
+        alignSelf:'center'
     },
     text3Typo: {
         // color: Color.aliasTokenColorNeutralLightmodeTextSecondary,
@@ -183,8 +228,9 @@ const styles = StyleSheet.create({
         height: 200,
         position: "absolute",
         overflow: "hidden",
-        marginTop: 110,
-        alignSelf: 'center'
+        marginTop: 17,
+        alignSelf: 'center',
+        
     },
     linearGradient: {
         position: 'absolute',
@@ -198,10 +244,11 @@ const styles = StyleSheet.create({
         marginLeft: 14,
     },
     shortcut: {
-        top: 325,
+        top: 324,
         // left: 18,
         flexDirection: "row",
         position: "absolute",
+        alignSelf:'center'
     },
     stotTypo: {
         lineHeight: 25,
@@ -267,10 +314,11 @@ const styles = StyleSheet.create({
         width: 343,
     },
     shortcut4: {
-        top: 455,
+        top: 450,
         // left: 18,
         flexDirection: "row",
         position: "absolute",
+        alignSelf:'center'
     },
     shortcutSpaceBlock: {
         // backgroundColor: Color.globalTokenGradientGradient2,
