@@ -5,6 +5,7 @@ import { useTheme } from "react-native-paper";
 // import myTheme from '@/constants/Colors';
 import Home from "./index";
 import TestScreen from '@/components/screens/TestScreen';
+import Cammera from '@/components/screens/Camera';
 import DashBoard from '@/components/screens/DashBoard';
 import { LinearGradient } from 'expo-linear-gradient';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
@@ -16,12 +17,19 @@ export default function TabLayout() {
 
     return (
 
-        <Tab.Navigator>
+        <Tab.Navigator style={{backgroundColor:'red'}}>
             <Tab.Screen
                 name="Home"
                 component={Home}
                 options={{
                     tabBarIcon: "home-variant-outline",
+                }}
+            />
+            <Tab.Screen
+                name="Cammera"
+                component={Cammera}
+                options={{
+                    tabBarIcon: "camera",
                 }}
             />
             <Tab.Screen
@@ -40,6 +48,9 @@ export default function TabLayout() {
     );
 }
 const styles = StyleSheet.create({
+    main:{
+        backgroundColor:'red'
+    }
 })
 
 
