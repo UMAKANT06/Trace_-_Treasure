@@ -1,4 +1,3 @@
-// HomeScreen.tsx
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
@@ -52,7 +51,7 @@ const HomeScreen: React.FC = () => {
                             // source={require("../assets/illustrationsave-money.png")}
                             source={require('../../assets/illustrationsave-money.png')}
                         />
-                        <Text>Stock</Text>
+                        <Text>Lost and Found</Text>
                     </LinearGradient>
                     <LinearGradient
                         style={[styles.shortcut2, styles.shortcutSpaceBlock]}
@@ -64,7 +63,7 @@ const HomeScreen: React.FC = () => {
                             contentFit="cover"
                             source={require("../../assets/illustrationsecurity.png")}
                         />
-                        <Text>Stock</Text>
+                        <Text>PYQ's</Text>
                     </LinearGradient>
                     <LinearGradient
                         style={[styles.shortcut2, styles.shortcutSpaceBlock]}
@@ -76,7 +75,7 @@ const HomeScreen: React.FC = () => {
                             contentFit="cover"
                             source={require("../../assets/illustrationsave-money1.png")}
                         />
-                        <Text>Stock</Text>
+                        <Text>Acadmeic Calendar</Text>
                     </LinearGradient>
                 </View>
                 <View style={styles.shortcut4}>
@@ -91,7 +90,7 @@ const HomeScreen: React.FC = () => {
                             // source={require("../assets/illustrationsave-money.png")}
                             source={require('../../assets/illustrationsave-money.png')}
                         />
-                        <Text>Stock</Text>
+                        <Text>Criculum and Syullabus</Text>
                     </LinearGradient>
                     <LinearGradient
                         style={[styles.shortcut2, styles.shortcutSpaceBlock]}
@@ -103,7 +102,7 @@ const HomeScreen: React.FC = () => {
                             contentFit="cover"
                             source={require("../../assets/illustrationsecurity.png")}
                         />
-                        <Text>Stock</Text>
+                        <Text>Books</Text>
                     </LinearGradient>
                     <LinearGradient
                         style={[styles.shortcut2, styles.shortcutSpaceBlock]}
@@ -115,7 +114,7 @@ const HomeScreen: React.FC = () => {
                             contentFit="cover"
                             source={require("../../assets/illustrationsave-money1.png")}
                         />
-                        <Text>Stock</Text>
+                        <Text>Shopping</Text>
                     </LinearGradient>
                 </View>
 
@@ -134,7 +133,7 @@ const HomeScreen: React.FC = () => {
                                 <Text style={[styles.step11, styles.stotTypo]}>Step 1</Text>
                                 <Text
                                     style={[styles.enterIntroduceCouper, styles.text3Typo]}
-                                >{`Enter introduce couper `}</Text>
+                                >{`Open the Cammera `}</Text>
                             </View>
                         </View>
                         <View style={styles.step2}>
@@ -148,7 +147,7 @@ const HomeScreen: React.FC = () => {
                             <View style={styles.text1}>
                                 <Text style={[styles.step11, styles.stotTypo]}>Step 2</Text>
                                 <Text style={[styles.enterIntroduceCouper, styles.text3Typo]}>
-                                    Deposit in fund
+                                    Upload materilas to help others
                                 </Text>
                             </View>
                         </View>

@@ -1,11 +1,61 @@
-import express from 'express';
+// import express from 'express';
+const express = require('express');
+const mongoose = require('mongoose');
+import bodyParser from "body-parser";
+import cors from "cors";
+import dotenv from "dotenv";
+import helmet from "helmet";
+import morgan from "morgan";
+import path from "path";
+import { PORT,MONGO_URL } from './utils/getEnv';
+import { fileURLToPath } from "url";
+
+/* CONFIGURATIONS */
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+// dotenv.config();
 const app = express();
-const port = 8002;
+// app.use(express.json());
+// app.use(helmet());
+// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+// app.use(morgan("common"));
+// app.use(bodyParser.json({ limit: "30mb" }));
+// app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+// app.use(cors());
+// app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
-app.get('/', (req, res) => {
-  res.send('Hello world umakant now its correct and work   !');
+
+//DATABASE CONNECTION
+
+/* MONGOOSE SETUP */
+
+mongoose.connection.on("connecting", () => {
+    console.log("Connecting to Database...");
 });
 
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+mongoose.connection.on("connected", () => {
+    console.log("Connected to Database");
 });
+
+mongoose.connection.on("disconnected", () => {
+    console.log("Disconnected from Database");
+});
+
+mongoose.connection.on("error", (error) => {
+    console.log(error);
+});
+
+mongoose
+    .connect(MONGO_URL)
+    .then(() => {
+        app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
+    })
+    .catch((error) => console.log(`${error} did not connect`));
+
+// let gfs: mongoose.mongo.GridFSBucket;
+// mongoose.connection.once("open", () => {
+//     gfs = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
+//         bucketName: "uploads",
+//     });
+// });
+// export { gfs };
