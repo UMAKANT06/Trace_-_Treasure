@@ -5,29 +5,47 @@ import * as ImagePicker from 'expo-image-picker'; // Import ImagePicker from exp
 import BackSurface from '../common/BackSurface';
 import { Color, Border } from '@/constants/Colors';
 import * as DocumentPicker from 'expo-document-picker';
+import { API_URL } from '@/context/auth';
+import axios from "axios";
+
+interface MyDocumentValues {
+  Branch: string;
+  Semester: number;
+  Role: string;
+  // Document: Buffer|null;
+}
 
 const Camera: React.FC = () => {
-  const handleUploadPress = async () => {
+  const handleUploadPress = async (values: MyDocumentValues,) => {
     try {
+      values.Branch = "CSE";
+      values.Semester=3;
+      values.Role="Core";
       const result = await DocumentPicker.getDocumentAsync({
-        type: '*/*', // Allow picking all types of files
+        type: 'application/pdf',
       });
+      // const file: File = new File([result.uri], result.name || 'Untitled.pdf', {
+      //   type: 'application/pdf',
+      // });
+      // values.Document=file;
+      const logValues = {
+        Branch: values.Branch,
+        Semester: values.Semester,
+        Role: values.Role,
+        // Document: values.Document
+      };
+      console.log(logValues);
+      const response=await axios.post(`${API_URL}/uploadDocumnets//upload`,logValues);
+      alert(response.data.message);
+      console.log(response.data.message);
 
-      // if (result.type === 'success') {
-      //   console.log('File picked:', result.uri);
-      //   // Handle the picked file here (e.g., upload it to a server)
-      // } else {
-      //   console.log('File picking cancelled');
-      // }
+     console.log(result);
     } catch (error) {
       console.error('Error picking file:', error);
     }
   };
 
   const handleTakePhotoPress = async () => {
-    // Open device camera for taking a photo
-    // You need to implement this functionality using the ImagePicker API
-    // For example:
     const result = await ImagePicker.launchCameraAsync({
       allowsEditing: true,
       aspect: [4, 3],
